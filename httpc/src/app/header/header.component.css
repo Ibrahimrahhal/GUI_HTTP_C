@@ -1,0 +1,15 @@
+header{
+background-color: #DA1f26;
+color: #ffffff;
+font-family: "Cairo";
+display: flex;
+height: 60px;
+align-items: center;
+justify-content: center;
+font-weight: 200;
+font-size: 1.5rem;
+-webkit-app-region: drag;
+/* position: fixed;
+z-index: 1; */
+width:100%;
+}

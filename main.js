@@ -6,10 +6,10 @@ let win
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({ width: 800, height: 600  })
+  win = new BrowserWindow({ width: 500, height: 600, frame: false  })
 
   // and load the index.html of the app.
-  win.loadFile('httpclient/dist/httpclient/index.html')
+  win.loadFile('httpc/dist/httpc/index.html')
 
   // Open the DevTools.
   // win.webContents.openDevTools()

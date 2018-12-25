@@ -1,0 +1,47 @@
+<div class="all">
+
+
+
+<div class="first-text">
+  You Can use this App to Make HTTP Get / Post requests
+</div>
+<input type="text" class="url-input"
+ placeholder="URL:   dummyapi.com/jokes" />
+<div class="req-btns">
+  <div [ngClass]="getbtn">
+GET
+  </div>
+  <div [ngClass]="postbtn">
+POST
+  </div>
+
+</div>
+<div class="Plus">
+<span (click)="addInput(true)">+ Params</span>
+</div>
+<div class="input_div" *ngFor="let para of paras">
+<input type="text" name="pkey{{para}}" class="para-input" placeholder="KEY">
+:
+<input type="text" name="pvalue{{para}}" class="para-input" placeholder="VALUE">
+</div>
+
+
+<div class="Plus">
+<span (click)="addInput(false)">+ Header</span>
+</div>
+<div class="input_div" *ngFor="let header of headers">
+<input type="text" name="hkey{{header}}" class="para-input" placeholder="KEY">
+:
+<input type="text" name="hvalue{{header}}" class="para-input" placeholder="VALUE">
+</div>
+
+<div class="submit-btns">
+  <div class="close-btn hvr-bounce-to-bottom">
+Close Window
+  </div>
+  <div class="submit-btn hvr-bounce-to-bottom">
+Send Request
+  </div>
+</div>
+
+</div>
