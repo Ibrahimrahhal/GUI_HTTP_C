@@ -168,3 +168,33 @@ color: #da1f26;
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
+
+
+textarea{
+width: 80% !important;
+display: block !important;
+margin: 0 auto !important;
+resize: vertical !important;
+height: 150px !important;
+color: #000 !important;
+text-align: left !important;
+font-weight: 400 !important;
+}
+textarea:focus {
+  outline: none;
+}
+
+.json{
+  justify-content: flex-start;
+  width: 80%;
+  margin: 10px auto;
+}
+.json div{
+  margin-left: 10px;
+  border-radius: 20px;
+  background-color: #da1f26;
+}
+/* // */
+/*  */
+/*  */
+/*  */

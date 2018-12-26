@@ -8,10 +8,10 @@
 <input type="text" class="url-input"
  placeholder="URL:   dummyapi.com/jokes" />
 <div class="req-btns">
-  <div [ngClass]="getbtn">
+  <div [ngClass]="getbtn" (click)="setReq(true)">
 GET
   </div>
-  <div [ngClass]="postbtn">
+  <div [ngClass]="postbtn" (click)="setReq(false)">
 POST
   </div>
 
@@ -20,9 +20,9 @@ POST
 <span (click)="addInput(true)">+ Params</span>
 </div>
 <div class="input_div" *ngFor="let para of paras">
-<input type="text" name="pkey{{para}}" class="para-input" placeholder="KEY">
+<input type="text" name="pkey{{para}}" class="para-input pkey{{para}}" placeholder="KEY">
 :
-<input type="text" name="pvalue{{para}}" class="para-input" placeholder="VALUE">
+<input type="text" name="pvalue{{para}}" class="para-input pvalue{{para}}" placeholder="VALUE">
 </div>
 
 
@@ -30,16 +30,37 @@ POST
 <span (click)="addInput(false)">+ Header</span>
 </div>
 <div class="input_div" *ngFor="let header of headers">
-<input type="text" name="hkey{{header}}" class="para-input" placeholder="KEY">
+<input type="text" name="hkey{{header}}" class="para-input hkey{{header}}" placeholder="KEY">
 :
-<input type="text" name="hvalue{{header}}" class="para-input" placeholder="VALUE">
+<input type="text" name="hvalue{{header}}" class="para-input hvalue{{header}}" placeholder="VALUE">
 </div>
+
+
+<div class="Plus" *ngIf="!get" >
+<span  style="cursor:default;">+ Body</span>
+</div>
+<div class="req-btns json" *ngIf="!get">
+  <div [ngClass]="jsonbtn" (click)="setBody(true)">
+json
+  </div>
+  <div [ngClass]="rawbtn" (click)="setBody(false)">
+raw
+  </div>
+
+</div>
+
+<textarea  rows="1" cols="1" class="url-input"  *ngIf="!get"></textarea>
+
+
+
+
+
 
 <div class="submit-btns">
   <div class="close-btn hvr-bounce-to-bottom">
 Close Window
   </div>
-  <div class="submit-btn hvr-bounce-to-bottom">
+  <div class="submit-btn hvr-bounce-to-bottom" (click)="reqbtn()">
 Send Request
   </div>
 </div>
